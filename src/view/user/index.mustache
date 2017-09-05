@@ -1,0 +1,50 @@
+{{> header }}
+
+{{> adminmenu }}
+
+    <h3 class="adminpage_title">Admin Users</h3>
+
+    {{# status }}
+        <div class="alert alert-success"><i>{{ status }}</i></div>
+    {{/status}}
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Role</th>
+                <th>Active?</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{# users }}
+                <tr>
+                    <td><strong>{{ username }}</strong></td>
+                    <td>{{ firstname }}</td>
+                    <td>{{ lastname }}</td>
+                    <td>{{ role }}</td>
+                    <td>{{# yesno }}{{ is_active }}{{/ yesno }}</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="{{# path }}user/edit/{{/ path }}/{{ username }}">Edit</a>
+                        {{^ editable }}
+                            <a class="btn btn-danger btn-sm disabled">Delete</a>
+                        {{/ editable }}
+                        {{# editable }}
+                            <a class="btn btn-danger btn-sm" href="{{# path }}user/delete{{/path}}/{{ username }}">Delete</a>
+                        {{/ editable }}
+                    </td>
+                </tr>
+        {{/ users }}
+            </tbody>
+        </table>
+
+        <div class="btn-group">
+            <a class="btn btn-primary" href="{{# path }}user/edit{{/ path }}">
+                Add a new user
+            </a>
+        </div>
+
+{{> footer }}

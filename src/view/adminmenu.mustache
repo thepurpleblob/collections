@@ -1,0 +1,77 @@
+
+<div id="adminmenu">
+    <ul class="row">
+        <li>
+            <a href="{{# path }}service/index{{/path}}">
+                <span class="fa-stack fa-3x">
+                    <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-subway fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="admintext">
+                    Services
+                </span>
+            </a>
+        </li>
+        {{# system.admin }}
+            <li>
+                <a href="{{# path }}user/index{{/path}}">
+                    <span class="fa-stack fa-3x">
+                        <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="admintext">
+                        Users
+                    </span>
+                </a>
+            </li>
+        {{/ system.admin }}
+        {{# serviceid }}
+            {{# system.admin }}
+                <li>
+                    <a href="{{# path }}destination/index{{/ path }}/{{ serviceid }}">
+                        <span class="fa-stack fa-3x">
+                            <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="admintext">
+                            Destinations
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{# path }}priceband/index{{/ path }}/{{ serviceid }}">
+                        <span class="fa-stack fa-3x">
+                            <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-gbp fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="admintext">
+                            Price bands
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{# path }}joining/index{{/ path }}/{{ serviceid }}">
+                        <span class="fa-stack fa-3x">
+                            <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-building fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="admintext">
+                            Stations
+                        </span>
+                    </a>
+                </li>
+            {{/ system.admin }}
+            <li>
+                <a href="{{# path }}limits/edit{{/ path }}/{{ serviceid }}">
+                    <span class="fa-stack fa-3x">
+                        <i class="menubackground fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-line-chart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="admintext">
+                            Limits
+                    </span>
+                </a>
+            </li>
+        {{/ serviceid }}
+    </ul>
+</div>

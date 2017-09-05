@@ -1,0 +1,42 @@
+{{> header }}
+   
+    <div class="row">
+        <div class="col-md-4 offset-md-4 col-10 col-offset-2" id="logincol">
+            <p id="loginheading">Login</p>
+
+            {{> formerrors }}
+
+            <form id="loginform" action="{{ action }}" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control form-control-lg" id="username" name="username" value="{{ last_username }}" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control form-control-lg" id="password" name="password" />
+                </div>
+
+                <button type="submit" id="loginbtn" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        $("#loginform").validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true
+                }
+            },
+            errorClass: "validateerror",
+        }
+        )
+    </script>
+
+
+{{> footer }}
