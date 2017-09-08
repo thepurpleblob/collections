@@ -34,6 +34,7 @@ footer {
 
 /* errors */
 
+
 label.error {
     color: #ff0000;
     font-size: 80%;
@@ -44,26 +45,20 @@ label.error {
     list-style-type: none;
 }
 
-/* admin menu */
 
-#adminmenu ul {
-    list-style: none;
-}
-
-#adminmenu li {
-    padding-right: 15px;
-}
-
-.fa-circle::before {
-    text-shadow: 2px 2px 2px #888;
-}
-
-.admintext {
-    display: block;
-    text-align: center;
-}
 
 /* admin pages */
+
+
+div#menucontainer {
+    margin: 40px 20% 0;
+    padding: 20px;
+    border: 2px solid #dfdfdf;
+}
+
+.adminbuttons {
+    list-style: none;
+}
 
 .adminpage_title {
     text-align: center;
@@ -92,15 +87,5 @@ span.badge-crs {
     margin: 20px 0;
 }
 
-/* service show */
-.table-priceband {
-    font-size: 80%;
-}
+/* menu page */
 
-/* report pages */
-
-tr.purchase_not_ok {
-    background-color: #f2dede;
-    border-color: #ebcccc;
-    color: #a94442;
-}

@@ -178,6 +178,20 @@ class coreForm {
         return $html;
     }
 
+    public function filepicker($name, $label) {
+        $id = $name . 'Text';
+        $html = '<div class="form-group">';
+        if ($label) {
+            $html .= '    <label for="' . $id . '" class="col-sm-4 control-label">' . $label . '</label>';
+        }
+        $html .= '    <div class="col-sm-8">';
+        $html .= '    <input type="file" class="form-control input-sm" name="'.$name.'" id="'.$id.'" />';
+
+        $html .= '</div></div>';
+
+        return $html;
+    }
+
     public function yesno($name, $label, $yes) {
         $options = array(
             0 => 'No',
