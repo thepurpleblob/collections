@@ -37,9 +37,15 @@ class AdminController extends coreController {
     public function uploadAction() {
         $this->require_login('ROLE_ADMIN', 'admin/upload');
 
+        // anything submitted?
+        if ($data = $this->getRequest()) {
+            echo "<pre>"; var_dump($data); var_dump($_FILES); die;
+        }
+
         // Create form
         $form = new \stdClass();
         $form->csv = $this->form->filepicker('csv', 'CSV file');
+        $form->pictures = $this->form->filepicker('pictures', 'Pictures zip file');
 
         // Display the form
         $this->View('admin/upload', array(

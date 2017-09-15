@@ -192,6 +192,10 @@ class coreForm {
         return $html;
     }
 
+    public function get_file() {
+
+    }
+
     public function yesno($name, $label, $yes) {
         $options = array(
             0 => 'No',

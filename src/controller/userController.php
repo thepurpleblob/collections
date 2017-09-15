@@ -66,7 +66,7 @@ class UserController extends coreController {
                     if (!empty($_SESSION['wantsurl'])) {
                         $redirect = $_SESSION['wantsurl'];
                     } else {
-                        $redirect = 'service/index';
+                        $redirect = 'admin/index';
                     }
                     $this->redirect($redirect);
                 } else {

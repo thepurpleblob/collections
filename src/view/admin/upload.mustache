@@ -1,12 +1,20 @@
 {{> header }}
 
-<h3>Collections management - Upload</h3>
+    <h3>Collections management - Upload</h3>
 
-<div class="alert alert-info">
-    Supply a CSV file with picture information
-</div>
+    <div class="alert alert-info">
+        Supply a CSV file with picture information and/or a zip file with corresponding pictures.
+        You don't have to supply both. They will match up as required.
+    </div>
 
-{{{ form.csv }}}
+    <form id="upload-form" class="form-validate form-horizontal" enctype="multipart/form-data" action="{{# path }}admin/upload{{/ path }}" method="post">
+        {{{ form.csv }}}
+        {{{ form.pictures }}}
 
+        <div>
+            <input type="submit" name="submit" value="Upload" class="btn btn-primary" />
+            <input type="submit" name="cancel" value="Cancel" formnovalidate="formnovalidate" class="btn btn-warning" />
+        </div>
+    </form>
 
 {{> footer }}
