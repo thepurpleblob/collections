@@ -1,5 +1,15 @@
 <?php
 
+if (!file_exists(dirname(__FILE__) . '/config.php')) {
+    echo('<b>No config.php file found - cannot continue</b>');
+    die;
+}
+
+if (!file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
+    echo('<b>No autoload.php file - cannot continue. Did you run composer?');
+    die;
+}
+
 require(dirname(__FILE__) . '/vendor/autoload.php');
 require(dirname(__FILE__) . '/config.php');
 require(dirname(__FILE__) . '/core/version.php');

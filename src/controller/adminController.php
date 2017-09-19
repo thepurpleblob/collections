@@ -16,7 +16,7 @@ class AdminController extends coreController {
         parent::__construct($exception);
 
         // Library
-        $this->adminlib = $this->getLibrary('User');
+        $this->adminlib = $this->getLibrary('Admin');
     }
 
 
@@ -39,7 +39,12 @@ class AdminController extends coreController {
 
         // anything submitted?
         if ($data = $this->getRequest()) {
-            echo "<pre>"; var_dump($data); var_dump($_FILES); die;
+
+            // Try for csv data
+            if ($csv =$this->form->file_get_contents('csv')) {
+                $this->adminlib->load_csv($csv);
+            }
+
         }
 
         // Create form

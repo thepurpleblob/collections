@@ -192,8 +192,12 @@ class coreForm {
         return $html;
     }
 
-    public function get_file() {
-
+    public function file_get_contents($basename) {
+        if (empty($_FILES[$basename]['name'])) {
+            return false;
+        } else {
+            return file_get_contents($_FILES[$basename]["tmp_name"]);
+        }
     }
 
     public function yesno($name, $label, $yes) {
