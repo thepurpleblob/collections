@@ -93,3 +93,8 @@ span.badge-crs {
 .thumbnail {
     max-width: 75px;
 }
+
+/* Navigation */
+.navbar {
+    margin-bottom: 30px;
+}

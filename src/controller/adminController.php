@@ -57,6 +57,7 @@ class AdminController extends coreController {
         // Display the form
         $this->View('admin/upload', array(
             'form' => $form,
+            'active_admin_upload' => 'active',
         ));
     }
 
@@ -74,6 +75,7 @@ class AdminController extends coreController {
         $this->View('admin/display', array(
             'items' => $items,
             'image_url' => $CFG->www . '/data/',
+            'active_admin_display' => 'active',
         ));
     }
 }
