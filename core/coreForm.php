@@ -200,6 +200,10 @@ class coreForm {
         }
     }
 
+    public function file_get_path($basename) {
+
+    }
+
     public function yesno($name, $label, $yes) {
         $options = array(
             0 => 'No',

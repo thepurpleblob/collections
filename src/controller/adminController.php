@@ -45,6 +45,8 @@ class AdminController extends coreController {
                 $this->adminlib->load_csv($csv);
             }
 
+            // Try for pictures data
+            $this->adminlib->load_pictures('pictures');
         }
 
         // Create form
@@ -62,6 +64,8 @@ class AdminController extends coreController {
      * display data
      */
     public function displayAction() {
+        global $CFG;
+
         $this->require_login('ROLE_ADMIN', 'admin/upload');
 
         // Get data (may be more sophisticated in time)
@@ -69,6 +73,7 @@ class AdminController extends coreController {
 
         $this->View('admin/display', array(
             'items' => $items,
+            'image_url' => $CFG->www . '/data/',
         ));
     }
 }

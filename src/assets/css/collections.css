@@ -89,3 +89,7 @@ span.badge-crs {
 
 /* menu page */
 
+/* display */
+.thumbnail {
+    max-width: 75px;
+}
