@@ -57,4 +57,18 @@ class AdminController extends coreController {
             'form' => $form,
         ));
     }
+
+    /**
+     * display data
+     */
+    public function displayAction() {
+        $this->require_login('ROLE_ADMIN', 'admin/upload');
+
+        // Get data (may be more sophisticated in time)
+        $items = $this->adminlib->getItems();
+
+        $this->View('admin/display', array(
+            'items' => $items,
+        ));
+    }
 }

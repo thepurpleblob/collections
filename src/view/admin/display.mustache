@@ -1,0 +1,31 @@
+{{> header }}
+
+<h3>Display items</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Institution code</th>
+            <th>Object number</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Reproduction reference</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{# items }}
+            <tr>
+                <td>{{ institution_code }}</td>
+                <td>{{ object_number }}</td>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+                <td>{{ reproduction_reference }}</td>
+            </tr>
+        {{/ items }}
+    </tbody>
+</table>
+
+
+
+
+{{> footer }}

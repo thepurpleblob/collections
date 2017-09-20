@@ -17,7 +17,7 @@ class Admin {
      * Process uploaded CSV file
      * @param string $csv csv data
      */
-    function load_csv($csv) {
+    public function load_csv($csv) {
         $parser = new \parseCSV($csv);
         //echo "<pre>"; var_dump($parser->data); die;
 
@@ -40,6 +40,15 @@ class Admin {
             $item->reproduction_reference = $row['reproduction.reference'];
             $item->save();
         }
+    }
+
+    /**
+     * Get the items data
+     */
+    public function getItems() {
+        $items = \ORM::for_table('items')->find_many();
+
+        return $items;
     }
 
 
