@@ -1,0 +1,43 @@
+{{> header }}
+
+{{> mainmenu }}
+
+<h3>Search results</h3>
+
+{{# anyitems }}
+    <div class="alert alert-success">
+        {{ count }} Result{{ count_plural }} found (click object number or image)
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Object number</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{# items }}
+                <tr>
+                    <td><a href="{{# path }}site/single{{/ path }}/{{ id }}">{{ object_number }}</a></td>
+                    <td>{{ title }}</td>
+                    <td>{{ description }}</td>
+                    <td><a href="{{# path }}site/single{{/ path }}/{{ id }}"><img class="thumbnail" src="{{ image_url }}/{{ reproduction_reference }}"></a></td>
+                </tr>
+            {{/ items }}
+        </tbody>
+    </table>
+{{/ anyitems }}
+
+{{^ anyitems }}
+    <div class="alert alert-warning">
+        No results found
+    </div>
+{{/ anyitems }}
+
+
+
+
+{{> footer }}

@@ -7,17 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{# path }}site/index{{/ path }}">Home <span class="sr-only"></span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {{ active_admin_display }}" href="{{# path }}admin/display{{/ path }}">Display</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ active_admin_upload }}" href="{{# path }}admin/upload{{/ path }}">Upload</a>
-            </li>
+            {{# system.admin }}
+                <li class="nav-item">
+                    <a class="nav-link {{ active_admin_display }}" href="{{# path }}admin/display{{/ path }}">Display</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ active_admin_upload }}" href="{{# path }}admin/upload{{/ path }}">Upload</a>
+                </li>
+            {{/ system.admin }}
         </ul>
-        <form class="form-inline my-2 my-lg-0" action="{{# path }}site/search{{/path}}">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <form class="form-inline my-2 my-lg-0" action="{{# path }}site/search{{/path}}" method="post">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>

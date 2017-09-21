@@ -160,6 +160,9 @@ class coreController {
         // Get template
         $template = $mustache->loadTemplate($viewname . '.mustache');
 
+        // headers
+        header('Cache-control: public');
+
         // and render.
         echo $template->render($variables);
 

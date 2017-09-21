@@ -1,0 +1,31 @@
+{{> header }}
+
+{{> mainmenu }}
+
+
+<table class="table">
+
+    <tbody>
+        <tr>
+            <th>Object number</th>
+            <td>{{ item.object_number }}</td>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <td>{{ item.title }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ item.description }}</td>
+        </tr>
+        <tr>
+            <td><img class="mt-3" src="{{ image_url }}/{{ item.reproduction_reference }}"></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+{{> footer }}
