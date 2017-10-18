@@ -88,4 +88,14 @@ class SiteController extends coreController {
         }
     }
 
+    /**
+     * Menu box action for photographs
+     * @param string $select
+     */
+    public function photographsAction($select) {
+
+        $this->View('site/dummy');
+
+    }
+
 }
