@@ -2,15 +2,41 @@
 
 {{> mainmenu }}
 
-<h3>Collections management</h3>
-
-<div class="alert alert-info">
-    Enter your search terms here...
+<div class="container-fluid menugrid">
+    <div class="row">
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/vehicles">Vehicles</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/photographs">Photographs</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/tools">Tools & Equipment</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/archive">Archive</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/signs">Signs</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/art">Art Publicy & Commemorative</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/costume">Costume</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/maps">Maps & Plans</a>
+        </div>
+        <div class="col menubox">
+            <a class="menuclick" href="{{# path }}site/menu{{/ path }}/signalling">Signalling</a>
+        </div>
+    </div>
 </div>
 
-<form class="form-inline my-2 my-lg-0" action="{{# path }}site/search{{/path}}" method="post">
-    <input class="form-control mr-sm-2 w-75" type="text" placeholder="Search" name="search">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-</form>
 
 {{> footer }}

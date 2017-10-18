@@ -71,4 +71,21 @@ class SiteController extends coreController {
         ));
     }
 
+    /**
+     * Menu box action
+     * @param string $select
+     */
+    public function menuAction($select) {
+
+        // Pictures have a sub-menu
+        if ($select == 'photographs') {
+            $this->View('site/pictures', array(
+
+            ));
+            die;
+        } else {
+            $this->View('site/dummy');
+        }
+    }
+
 }

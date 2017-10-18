@@ -1,11 +1,23 @@
     </div>
 </div>
 <footer>
-    {{^ system.loggedin }}
-        <a href="{{# path }}user/login{{/path}}"> admin login</a>
-    {{/ system.loggedin }}
-    {{# system.loggedin }}
-        Logged in as {{ system.fullname }}. <a href="{{# path }}user/logout{{/path}}">logout</a>
-    {{/ system.loggedin }}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+            {{^ system.loggedin }}
+                <a href="{{# path }}user/login{{/path}}"> admin login</a>
+            {{/ system.loggedin }}
+            {{# system.loggedin }}
+                Logged in as {{ system.fullname }}. <a href="{{# path }}user/logout{{/path}}">logout</a>
+            {{/ system.loggedin }}
+            </div>
+            <div class="col-6"></div>
+            <div class="col contactblock">
+                <strong>The Scottish Railway Preservation Society</strong><br />
+                Operator of Bo'ness & Kinneil Railway and Museum of Scottish Railways<br />
+                Scottish Charity No. SC002375
+            </div>
+        </div>
+    </div>
 </footer>
 </html>

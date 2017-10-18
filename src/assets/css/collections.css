@@ -7,18 +7,14 @@ body {
 }
 
 #banner {
-    background-color: #000;
-    height: 70px;
+    background-color: #fff;
     padding: 4px;
     margin-bottom: 20px;
 }
 
-#banner h1 {
-    font-size: 30px;
-    font-weight: normal;
-    color: #fff;
-    margin-top: 12px;
-    margin-left: 20px;
+div.logo {
+    width: 200px;
+    margin: 0 auto;
 }
 
 #content {
@@ -88,6 +84,21 @@ span.badge-crs {
 }
 
 /* menu page */
+.menubox {
+}
+
+.menuclick {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    padding: 25px 5px 5px;
+    border: 5px solid #4041fe;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+}
 
 /* display */
 .thumbnail {
