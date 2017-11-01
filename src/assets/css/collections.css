@@ -24,7 +24,7 @@ div.logo {
 footer {
     margin-top: 20px;
     padding: 5px;
-    background-color: #e1e1e1;
+    background-color: #fff;
     min-height: 50px;
 }
 
@@ -65,11 +65,6 @@ span.badge-crs {
     font-size: 1.2em;
 }
 
-/* pricebands */
-
-.pricebandrow {
-    font-size: 110%;
-}
 
 /* login page */
 
@@ -89,15 +84,124 @@ span.badge-crs {
 
 .menuclick {
     display: block;
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     margin: 20px auto;
-    padding: 25px 5px 5px;
+    padding: 5px 5px 5px;
     border: 5px solid #4041fe;
     border-radius: 10px;
     font-size: 1.5rem;
-    color: #000;
-    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+    background-image:     linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    );
+}
+
+a.bg_vehicles {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/vehicles.png);
+}
+
+a.bg_photographs {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/photographs.png);
+}
+
+a.bg_tools {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/tools.png);
+}
+
+a.bg_archive {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/archive.png);
+}
+
+a.bg_signs {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/signs.png);
+}
+
+a.bg_publicity {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/publicity.png);
+}
+
+a.bg_costume {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/costume.png);
+}
+
+a.bg_map {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/map.png);
+}
+
+a.bg_signalling {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/signalling.png);
+}
+
+a.bg_ph_vehicles {
+     background-image: linear-gradient(
+             rgba(0, 0, 0, 0.5),
+             rgba(0, 0, 0, 0.5)
+     ),
+     url(../images/buttons/ph_vehicles.png);
+ }
+
+a.bg_ph_stations {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/ph_stations.png);
+}
+
+a.bg_ph_people {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/ph_people.png);
+}
+
+a.bg_ph_miscellaneous {
+    background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+    ),
+    url(../images/buttons/ph_miscellaneous.png);
 }
 
 /* display */
@@ -105,7 +209,16 @@ span.badge-crs {
     max-width: 75px;
 }
 
+.index-intro {
+    text-align: center;
+}
+
+.index-intro p {
+    font-size: 1.2rem;
+}
+
 /* Navigation */
 .navbar {
     margin-bottom: 30px;
 }
+
