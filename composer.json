@@ -16,7 +16,7 @@
     "servo/fluidxml": "^1.20",
     "swiftmailer/swiftmailer": "@stable",
     "mustache/mustache": "^2.11",
-    "parsecsv/php-parsecsv": "^0.4.5"
+    "parsecsv/php-parsecsv": "@stable"
   },
   "autoload": {
     "psr-4": {

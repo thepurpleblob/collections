@@ -5,15 +5,15 @@ $CFG = new stdClass;
 
 // Database stuff
 $CFG->dsn = "mysql:host=127.0.0.1;dbname=collections";
-$CFG->dbuser = 'root';
-$CFG->dbpass = 'purple';
+$CFG->dbuser = '..user..';
+$CFG->dbpass = '..password..';
 
 // Project name
 // (Needs to match composer autoloader \\thepurpleblob\\projectname\\)
 $CFG->projectname = 'collections';
 
 // Routes (default if none specified)
-$CFG->defaultroute = 'admin/main';
+$CFG->defaultroute = 'site/index';
 
 // paths
 $CFG->www = 'http://localhost/collections';

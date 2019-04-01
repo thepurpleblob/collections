@@ -13,18 +13,27 @@ use Exception;
  */
 class Admin {
 
+    // CSV => Database
+    protected $csvfields = [
+        'institution.code' => 'institution_code',
+        'object_number' => 'object_number',
+        'title' => 'title',
+        'object_category' => 'object_category',
+        'description' => 'description',
+        'reproduction.reference' => 'reproduction_reference'
+    ];
+
     /**
      * Process uploaded CSV file
      * @param string $csv csv data
      */
     public function load_csv($csv) {
-        $parser = new \parseCSV($csv);
+        $parser = new \ParseCsv\Csv($csv);
 
         // run through data
         foreach ($parser->data as $row) {
             $item = \ORM::for_table('items')
                 ->where(array(
-                    'institution_code' => $row['institution.code'],
                     'object_number' => $row['object_number']
                 ))->find_one();
 
@@ -32,11 +41,10 @@ class Admin {
                 $item = \ORM::for_table('items')->create();
             }
 
-            $item->institution_code = $row['institution.code'];
-            $item->object_number = $row['object_number'];
-            $item->title = $row['title'];
-            $item->description = $row['description'];
-            $item->reproduction_reference = $row['reproduction.reference'];
+            foreach ($this->csvfields as $csvfield => $dbfield) {
+                $value = empty($row[$csvfield]) ? '' : $row[$csvfield];
+                $item->$dbfield = $value;
+            }
             $item->save();
         }
     }

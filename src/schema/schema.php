@@ -27,6 +27,7 @@ $schema[] = 'CREATE TABLE `items` (
   `institution_code` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `object_number` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `title` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
+  `object_category` varchar(75) COLLATE utf8_unicode_ci NOT NULL,
   `description` text COLLATE utf8_unicode_ci,
   `reproduction_reference` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
