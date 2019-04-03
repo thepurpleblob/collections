@@ -1,0 +1,37 @@
+{{> header }}
+
+{{> mainmenu }}
+
+<h3>{{ heading }}</h3>
+
+{{# noitems }}
+    <div class="alert alert-warning">There are no images in this category</div>
+{{/ noitems }}
+
+{{^ noitems }}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Object number</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{# items }}
+                <tr>
+                    <td>{{ object_number }}</td>
+                    <td>{{ title }}</td>
+                    <td>{{ description }}</td>
+                    <td><a href="{{# path }}site/single{{/ path }}/{{ id }}"><img class="thumbnail" src="{{ image_url }}/{{ reproduction_reference }}"></a></td>
+                </tr>
+            {{/ items }}
+        </tbody>
+    </table>
+{{/ noitems }}
+
+
+
+
+{{> footer }}

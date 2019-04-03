@@ -76,6 +76,7 @@ class SiteController extends coreController {
      * @param string $select
      */
     public function menuAction($select) {
+        global $CFG;
 
         // Pictures have a sub-menu
         if ($select == 'photographs') {
@@ -84,7 +85,13 @@ class SiteController extends coreController {
             ));
             die;
         } else {
-            $this->View('site/dummy');
+            $items = $this->lib->getItems($select);
+            $this->View('site/display', [
+                'noitems' => empty(count($items)),
+                'items' => $items,
+                'image_url' => $CFG->www . '/data/',
+                'heading' => $this->lib->getHeading($select),
+            ]);
         }
     }
 
@@ -93,9 +100,15 @@ class SiteController extends coreController {
      * @param string $select
      */
     public function photographsAction($select) {
+        global $CFG;
 
-        $this->View('site/dummy');
-
+        $items = $this->lib->getItems($select);
+        $this->View('site/display', [
+            'noitems' => empty(count($items)),
+            'items' => $items,
+            'image_url' => $CFG->www . '/data/',
+            'heading' => $this->lib->getHeading($select),
+        ]);
     }
 
 }
